@@ -1,44 +1,116 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-<title>Study at SJTU</title>
-<img src="images/logo1.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Study at SJTU | International Student Ambassador</title>
+
 <style>
 
 body{
-font-family: Arial;
+font-family: Arial, Helvetica, sans-serif;
 margin:0;
 background:#f4f4f4;
+line-height:1.6;
 }
+
+/* Header */
 
 header{
 background:#a50000;
 color:white;
-padding:30px;
+padding:20px;
 text-align:center;
 }
 
+header img{
+width:120px;
+display:block;
+margin:auto;
+}
+
+/* Navigation */
+
+nav{
+background:#333;
+text-align:center;
+}
+
+nav a{
+color:white;
+padding:15px 20px;
+display:inline-block;
+text-decoration:none;
+}
+
+nav a:hover{
+background:#a50000;
+}
+
+/* Sections */
+
 section{
-padding:40px;
+padding:50px;
+max-width:1100px;
+margin:auto;
+}
+
+/* Gallery */
+
+.gallery{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
 }
 
 .gallery img{
 width:300px;
 margin:10px;
+border-radius:8px;
+box-shadow:0 3px 8px rgba(0,0,0,0.2);
 }
+
+/* Scholarship list */
+
+ul{
+font-size:18px;
+}
+
+/* Contact */
 
 .contact{
 background:#eee;
-padding:30px;
+padding:40px;
+text-align:center;
 }
+
+/* Buttons */
 
 button{
 background:#a50000;
 color:white;
 border:none;
-padding:15px;
+padding:15px 25px;
 font-size:16px;
+cursor:pointer;
+border-radius:5px;
+margin:10px;
+}
+
+button:hover{
+background:#7c0000;
+}
+
+/* Footer */
+
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:25px;
+font-size:14px;
 }
 
 </style>
@@ -48,75 +120,167 @@ font-size:16px;
 <body>
 
 <header>
+
+<img src="images/logo1.png" alt="SJTU Logo">
+
 <h1>Study at Shanghai Jiao Tong University</h1>
-<p>Apply through International Student Ambassadors</p>
+
+<p>Information & Guidance from an International Student Ambassador</p>
+
 </header>
 
 
-<section>
+<nav>
+
+<a href="#about">About SJTU</a>
+<a href="#scholarships">Scholarships</a>
+<a href="#campus">Campus Life</a>
+<a href="#contact">Contact</a>
+<a href="#apply">Apply</a>
+
+</nav>
+
+
+<section id="about">
 
 <h2>About SJTU</h2>
 
 <p>
-Shanghai Jiao Tong University (SJTU) is one of China's top universities,
-offering world-class education and global scholarships for international students.
+
+:contentReference[oaicite:1]{index=1} (SJTU) is one of China's most prestigious universities and a member of China's top research universities.
+
+SJTU offers internationally recognized programs in:
+
+• Engineering  
+• Computer Science  
+• Artificial Intelligence  
+• Business & Economics  
+• Medicine  
+• Science  
+
+International students from over **150 countries** study at SJTU every year.
+
 </p>
 
 </section>
 
 
-<section>
+<section id="scholarships">
 
-<h2>Scholarships</h2>
+<h2>Available Scholarships</h2>
 
 <ul>
-<li>Chinese Government Scholarship</li>
+
+<li>Chinese Government Scholarship (CSC)</li>
+
 <li>SJTU University Scholarship</li>
+
 <li>Shanghai Government Scholarship</li>
+
+<li>International Graduate Scholarship</li>
+
 </ul>
+
+<p>
+
+Many international students receive **full or partial scholarships** covering tuition, accommodation, and living stipend.
+
+</p>
 
 </section>
 
 
-<section>
+<section id="campus">
 
 <h2>Campus Life</h2>
 
+<p>Experience world-class facilities and a vibrant international community.</p>
+
 <div class="gallery">
 
-<img src="images/campus1.jpg">
-<img src="images/campus2.png">
-<img src="images/campus3.png">
+<img src="images/campus1.jpg" alt="SJTU Campus">
+
+<img src="images/campus2.png" alt="SJTU Campus">
+
+<img src="images/campus3.png" alt="SJTU Campus">
 
 </div>
 
 </section>
 
 
-<section class="contact">
+<section class="contact" id="contact">
 
 <h2>Contact an Ambassador</h2>
 
-<p>Ask questions or apply through our ambassador network.</p>
+<p>
+
+Ask questions about programs, scholarships, application procedures, and student life.
+
+</p>
 
 <a href="https://wa.me/yourwhatsappnumber">
+
 <button>Chat on WhatsApp</button>
+
 </a>
+
+<a href="https://weixin.qq.com/">
+
+<button>Contact via WeChat</button>
+
+</a>
+
 <h2>SJTU Brochure</h2>
 
-<p>Download the official brochure to learn more about programs and scholarships.</p>
+<p>Download the official brochure for full details.</p>
 
 <a href="sjtu-brochure.pdf" download>
-<button>Download SJTU Brochure</button>
-</a>
-</section>
-<section Submit google form = Goole form>
-<h2>Contact / Apply</h2>
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeT7TeYJL7qDDvrXvUflRDpkRfVfnzUmb3U1oVBtjocqdHqtg/viewform?embedded=true"
-width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">
+<button>Download SJTU Brochure</button>
+
+</a>
+
+</section>
+
+
+<section id="apply">
+
+<h2>Student Inquiry / Application Form</h2>
+
+<p>
+
+Fill out the form below if you want guidance about studying at SJTU.
+
+</p>
+
+<iframe 
+src="https://docs.google.com/forms/d/e/1FAIpQLSeT7TeYJL7qDDvrXvUflRDpkRfVfnzUmb3U1oVBtjocqdHqtg/viewform?embedded=true"
+width="100%" 
+height="900" 
+frameborder="0" 
+marginheight="0" 
+marginwidth="0">
+
 Loading…
-</iframe>  
+
+</iframe>
+
+</section>
+
+
+<footer>
+
+<p>
+
+This website is an independent information page created by an international student ambassador to help prospective students learn about studying at SJTU.
+
+</p>
+
+<p>© 2026 Study at SJTU Guide</p>
+
+</footer>
+
 
 </body>
 
