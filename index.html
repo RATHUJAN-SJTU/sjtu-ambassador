@@ -71,7 +71,41 @@ margin:10px;
 border-radius:8px;
 box-shadow:0 3px 8px rgba(0,0,0,0.2);
 }
+/* CAMPUS SLIDER */
 
+.slider{
+position:relative;
+max-width:900px;
+margin:auto;
+overflow:hidden;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+.slides{
+display:flex;
+width:100%;
+animation: slide 15s infinite;
+}
+
+.slides img{
+width:100%;
+}
+
+@keyframes slide{
+
+0%{transform:translateX(0);}
+25%{transform:translateX(0);}
+
+33%{transform:translateX(-100%);}
+58%{transform:translateX(-100%);}
+
+66%{transform:translateX(-200%);}
+91%{transform:translateX(-200%);}
+
+100%{transform:translateX(0);}
+
+}
 /* Scholarship list */
 
 ul{
@@ -382,20 +416,29 @@ Many international students receive full or partial scholarships covering tuitio
 
 <section id="campus">
 
-<h2>Campus Life</h2>
+<h2>Campus Life at SJTU</h2>
 
-<p>Experience world-class facilities and a vibrant international community.</p>
+<p>
+Explore the beautiful campus, modern facilities, and vibrant international student life.
+</p>
 
-<div class="gallery">
+<div class="slider">
 
-<img src="images/campus1.jpg">
-<img src="images/campus2.png">
-<img src="images/campus3.png">
+<div class="slides">
+
+<img src="images/campus1.jpg" alt="SJTU Campus">
+
+<img src="images/campus2.png" alt="SJTU Library">
+
+<img src="images/campus3.png" alt="SJTU Students">
+
+<img src="images/campus4.jpg" alt="SJTU Building">
+
+</div>
 
 </div>
 
 </section>
-
 
 
 <section id="brochure">
