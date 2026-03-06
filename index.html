@@ -53,7 +53,7 @@ background:#a50000;
 
 section{
 padding:50px;
-max-width:1100px;
+max-width:1200px;
 margin:auto;
 }
 
@@ -76,6 +76,22 @@ box-shadow:0 3px 8px rgba(0,0,0,0.2);
 
 ul{
 font-size:18px;
+}
+
+/* School grid */
+
+.school-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:30px;
+}
+
+.school-card{
+background:white;
+padding:20px;
+border-radius:8px;
+box-shadow:0 3px 8px rgba(0,0,0,0.1);
 }
 
 /* Contact */
@@ -103,6 +119,15 @@ button:hover{
 background:#7c0000;
 }
 
+/* PDF viewer */
+
+.pdf-view{
+width:100%;
+height:700px;
+border:1px solid #ccc;
+margin-top:20px;
+}
+
 /* Footer */
 
 footer{
@@ -116,7 +141,6 @@ font-size:14px;
 </style>
 </head>
 
-
 <body>
 
 <header>
@@ -125,16 +149,18 @@ font-size:14px;
 
 <h1>Study at Shanghai Jiao Tong University</h1>
 
-<p>Information & Guidance from an International Student Ambassador</p>
+<p>Information & Guidance from an International Student Ambassador Team</p>
 
 </header>
 
 
 <nav>
 
-<a href="#about">About SJTU</a>
+<a href="#about">About</a>
+<a href="#schools">Schools & Colleges</a>
 <a href="#scholarships">Scholarships</a>
 <a href="#campus">Campus Life</a>
+<a href="#brochure">Brochure</a>
 <a href="#contact">Contact</a>
 <a href="#apply">Apply</a>
 
@@ -147,26 +173,111 @@ font-size:14px;
 
 <p>
 
-Shanghai Jiao Tong University (SJTU) is a prestigious public research university located in Shanghai, China. Founded in 1896, it operates under the direct administration of China’s Ministry of Education and has developed a strong reputation for academic excellence, innovation, and global collaboration. Shanghai Jiao Tong University is a member of the elite C9 League, often referred to as China’s equivalent of the Ivy League, and participates in several major national research initiatives. The university offers a broad range of academic programs across 77 undergraduate disciplines and numerous graduate fields, attracting students from around the world. With modern research facilities, distinguished faculty, and a vibrant international campus environment, SJTU plays a leading role in advancing scientific research, technological development, and global education.
-SJTU offers internationally recognized programs in: 
-<li>
- Engineering  </li>
-  <li>
- Computer Science  </li>
-  <li>
- Artificial Intelligence</li>
-  <li>
- Business & Economics  </li>
-  <li>
- Medicine  </li>
-<li>
- Science</li>  
+Shanghai Jiao Tong University (SJTU) is a prestigious public research university located in Shanghai, China. Founded in 1896, it operates under the direct administration of China’s Ministry of Education and has developed a strong reputation for academic excellence, innovation, and global collaboration. SJTU is a member of the elite C9 League, often referred to as China’s equivalent of the Ivy League, and participates in several major national research initiatives.
+
+</p>
+
+<p>
+
+The university offers a broad range of academic programs across 77 undergraduate disciplines and numerous graduate fields. With modern research facilities, distinguished faculty, and a vibrant international campus environment, SJTU plays a leading role in advancing scientific research, technological development, and global education.
+
+</p>
+
+<p>
 
 International students from over <b>150 countries</b> study at SJTU every year.
 
 </p>
 
 </section>
+
+
+
+<section id="schools">
+
+<h2>Schools & Colleges</h2>
+
+<div class="school-grid">
+
+<div class="school-card">
+<h3>Engineering</h3>
+<ul>
+<li>Ocean and Civil Engineering</li>
+<li>Mechanical Engineering</li>
+<li>Electronic Information & Electrical Engineering</li>
+<li>Automation</li>
+<li>Cyber Science / Computer Science</li>
+<li>Microelectronics</li>
+<li>Materials Science</li>
+<li>Environmental Engineering</li>
+<li>Biomedical Engineering</li>
+<li>Aeronautics & Astronautics</li>
+</ul>
+</div>
+
+<div class="school-card">
+<h3>Sciences</h3>
+<ul>
+<li>Mathematical Sciences</li>
+<li>Physics and Astronomy</li>
+<li>Chemistry and Chemical Engineering</li>
+<li>Oceanography</li>
+</ul>
+</div>
+
+<div class="school-card">
+<h3>Life & Medical Sciences</h3>
+<ul>
+<li>Life Sciences & Biotechnology</li>
+<li>Agriculture and Biology</li>
+<li>Medicine</li>
+<li>Pharmaceutical Sciences</li>
+</ul>
+</div>
+
+<div class="school-card">
+<h3>Humanities & Social Sciences</h3>
+<ul>
+<li>Economics and Management</li>
+<li>Law</li>
+<li>Foreign Languages</li>
+<li>Humanities</li>
+<li>Marxism</li>
+<li>International and Public Affairs</li>
+<li>Media and Communication</li>
+<li>Design</li>
+<li>Physical Education</li>
+<li>Shanghai Advanced Institute of Finance</li>
+</ul>
+</div>
+
+<div class="school-card">
+<h3>Joint Institutes</h3>
+<ul>
+<li>UM-SJTU Joint Institute</li>
+<li>Paris Elite Institute of Technology</li>
+<li>USC-SJTU Institute of Cultural & Creative Industry</li>
+<li>China Europe International Business School</li>
+<li>Sino-UK Low Carbon College</li>
+</ul>
+</div>
+
+<div class="school-card">
+<h3>Interdisciplinary Studies</h3>
+<ul>
+<li>Education</li>
+<li>Smart Energy</li>
+<li>Global Institute of Future Technology</li>
+<li>Artificial Intelligence</li>
+<li>Psychology</li>
+<li>Zhiyuan College</li>
+</ul>
+</div>
+
+</div>
+
+</section>
+
 
 
 <section id="scholarships">
@@ -176,22 +287,21 @@ International students from over <b>150 countries</b> study at SJTU every year.
 <ul>
 
 <li>Chinese Government Scholarship (CSC)</li>
-
 <li>SJTU University Scholarship</li>
-
 <li>Shanghai Government Scholarship</li>
-
-<li>International Graduate Scholarship</li>
+<li>International Chinese Language Teachers Scholarship</li>
+<li>Outreach Scholarship</li>
 
 </ul>
 
 <p>
 
-Many international students receive **full or partial scholarships** covering tuition, accommodation, and living stipend.
+Many international students receive full or partial scholarships covering tuition, accommodation, and living stipend.
 
 </p>
 
 </section>
+
 
 
 <section id="campus">
@@ -202,15 +312,32 @@ Many international students receive **full or partial scholarships** covering tu
 
 <div class="gallery">
 
-<img src="images/campus1.jpg" alt="SJTU Campus">
-
-<img src="images/campus2.png" alt="SJTU Campus">
-
-<img src="images/campus3.png" alt="SJTU Campus">
+<img src="images/campus1.jpg">
+<img src="images/campus2.png">
+<img src="images/campus3.png">
 
 </div>
 
 </section>
+
+
+
+<section id="brochure">
+
+<h2>SJTU Brochure</h2>
+
+<p>You can preview the official brochure below.</p>
+
+<iframe class="pdf-view" src="sjtu-brochure.pdf"></iframe>
+
+<br><br>
+
+<a href="sjtu-brochure.pdf" download>
+<button>Download Brochure</button>
+</a>
+
+</section>
+
 
 
 <section class="contact" id="contact">
@@ -224,53 +351,32 @@ Ask questions about programs, scholarships, application procedures, and student 
 </p>
 
 <a href="https://wa.me/yourwhatsappnumber">
-
 <button>Chat on WhatsApp</button>
-
 </a>
 
 <a href="https://weixin.qq.com/">
-
 <button>Contact via WeChat</button>
-
-</a>
-
-<h2>SJTU Brochure</h2>
-
-<p>Download the official brochure for full details.</p>
-
-<a href="sjtu-brochure.pdf" download>
-
-<button>Download SJTU Brochure</button>
-
 </a>
 
 </section>
+
 
 
 <section id="apply">
 
 <h2>Student Inquiry / Application Form</h2>
 
-<p>
-
-Fill out the form below if you want guidance about studying at SJTU.
-
-</p>
+<p>Fill out the form below if you want guidance about studying at SJTU.</p>
 
 <iframe 
 src="https://docs.google.com/forms/d/e/1FAIpQLSeT7TeYJL7qDDvrXvUflRDpkRfVfnzUmb3U1oVBtjocqdHqtg/viewform?embedded=true"
 width="100%" 
-height="900" 
-frameborder="0" 
-marginheight="0" 
-marginwidth="0">
-
-Loading…
+height="900">
 
 </iframe>
 
 </section>
+
 
 
 <footer>
