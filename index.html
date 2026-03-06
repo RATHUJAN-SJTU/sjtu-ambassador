@@ -127,7 +127,68 @@ height:700px;
 border:1px solid #ccc;
 margin-top:20px;
 }
+/* HERO BANNER */
 
+.hero{
+background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+url("images/sjtu-banner.jpg");
+background-size:cover;
+background-position:center;
+height:450px;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+animation: fadein 2s;
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:20px;
+}
+
+@keyframes fadein{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+
+/* QR POPUP */
+
+.popup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.7);
+justify-content:center;
+align-items:center;
+z-index:999;
+}
+
+.popup-content{
+background:white;
+padding:30px;
+border-radius:10px;
+text-align:center;
+}
+
+.popup img{
+width:220px;
+}
+
+.close{
+cursor:pointer;
+color:red;
+font-size:20px;
+}
 /* Footer */
 
 footer{
@@ -166,7 +227,22 @@ font-size:14px;
 
 </nav>
 
+<section class="hero">
 
+<div>
+
+<h1>Study at Shanghai Jiao Tong University</h1>
+
+<p>World-Class Education • Global Opportunities • Top Research University</p>
+
+<button onclick="openWhatsApp()">Chat via WhatsApp</button>
+
+<button onclick="openWeChat()">Contact via WeChat</button>
+
+</div>
+
+</section>
+  
 <section id="about">
 
 <h2>About SJTU</h2>
@@ -351,11 +427,11 @@ Ask questions about programs, scholarships, application procedures, and student 
 </p>
 
 <a href="https://wa.me/yourwhatsappnumber">
-<button>Chat on WhatsApp</button>
+<button onclick="openWhatsApp()">WhatsApp Contact</button>
 </a>
 
 <a href="https://weixin.qq.com/">
-<button>Contact via WeChat</button>
+<button onclick="openWeChat()">WeChat Contact</button>
 </a>
 
 </section>
@@ -390,7 +466,60 @@ This website is an independent information page created by an international stud
 <p>© 2026 Study at SJTU Guide</p>
 
 </footer>
+<!-- WhatsApp QR -->
 
+<div id="whatsappQR" class="popup">
+
+<div class="popup-content">
+
+<span class="close" onclick="closePopup()">Close ✖</span>
+
+<h3>Scan WhatsApp QR</h3>
+
+<img src="images/whatsapp-qr.png">
+
+<p>Scan to contact the SJTU Ambassador</p>
+
+</div>
+
+</div>
+
+
+
+<!-- WeChat QR -->
+
+<div id="wechatQR" class="popup">
+
+<div class="popup-content">
+
+<span class="close" onclick="closePopup()">Close ✖</span>
+
+<h3>Scan WeChat QR</h3>
+
+<img src="images/wechat-qr.png">
+
+<p>Scan to connect on WeChat</p>
+
+</div>
+
+</div>
+ <script>
+
+function openWhatsApp(){
+document.getElementById("whatsappQR").style.display="flex";
+}
+
+function openWeChat(){
+document.getElementById("wechatQR").style.display="flex";
+}
+
+function closePopup(){
+document.getElementById("whatsappQR").style.display="none";
+document.getElementById("wechatQR").style.display="none";
+}
+
+</script>
+  
 
 </body>
 
