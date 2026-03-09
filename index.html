@@ -906,7 +906,11 @@ updateCounter();
 
 function googleTranslateElementInit() {
 new google.translate.TranslateElement(
-{pageLanguage: 'en'},
+{
+pageLanguage: 'en',
+includedLanguages: 'en,zh-CN,zh-TW,fr,de,es,ru,ar,hi,ja,ko,ta,si',
+layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+},
 'google_translate_element'
 );
 }
