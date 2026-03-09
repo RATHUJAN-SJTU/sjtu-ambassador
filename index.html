@@ -223,6 +223,78 @@ cursor:pointer;
 color:red;
 font-size:20px;
 }
+/* AMBASSADOR TEAM */
+
+.team{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:30px;
+text-align:center;
+}
+
+.member{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.15);
+}
+
+.member img{
+width:150px;
+height:150px;
+border-radius:50%;
+object-fit:cover;
+margin-bottom:15px;
+}
+
+/* SERVICES */
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:30px;
+}
+
+.service-box{
+background:white;
+padding:20px;
+border-radius:8px;
+box-shadow:0 3px 8px rgba(0,0,0,0.1);
+}
+
+/* JOURNEY STEPS */
+
+.steps{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+margin-top:30px;
+}
+
+.step{
+background:white;
+padding:20px;
+border-radius:8px;
+text-align:center;
+box-shadow:0 3px 8px rgba(0,0,0,0.1);
+}
+
+/* FAQ */
+
+.faq{
+max-width:900px;
+margin:auto;
+}
+
+.faq-item{
+background:white;
+margin-bottom:15px;
+padding:20px;
+border-radius:8px;
+box-shadow:0 2px 6px rgba(0,0,0,0.1);
+} 
 /* Footer */
 
 footer{
@@ -258,6 +330,10 @@ font-size:14px;
 <a href="#brochure">Brochure</a>
 <a href="#contact">Contact</a>
 <a href="#apply">Apply</a>
+<a href="#team">Ambassador Team</a>
+<a href="#services">Our Services</a>
+<a href="#journey">Application Journey</a>
+<a href="#faq">FAQ</a>
 
 </nav>
 
@@ -412,7 +488,40 @@ Many international students receive full or partial scholarships covering tuitio
 
 </section>
 
+<section id="team">
 
+<h2>International Student Ambassador Team</h2>
+
+<p>
+We are international students currently studying at Shanghai Jiao Tong University. Our goal is to help prospective students understand the application process, scholarships, and student life in Shanghai.
+</p>
+
+<div class="team">
+
+<div class="member">
+<img src="images/ambassador1.jpg">
+<h3>Ambassador Name 1</h3>
+<p>Master's Student – Computer Science</p>
+<p>Helping international students apply for CSC and SJTU scholarships.</p>
+</div>
+
+<div class="member">
+<img src="images/ambassador2.jpg">
+<h3>Ambassador Name 2</h3>
+<p>PhD Student – Mechanical Engineering</p>
+<p>Guidance on research programs and graduate applications.</p>
+</div>
+
+<div class="member">
+<img src="images/ambassador3.jpg">
+<h3>Ambassador Name 3</h3>
+<p>Master's Student – International Business</p>
+<p>Helping students prepare documents and understand campus life.</p>
+</div>
+
+</div>
+
+</section>
 
 <section id="campus">
 
@@ -479,8 +588,90 @@ Ask questions about programs, scholarships, application procedures, and student 
 
 </section>
 
+<section id="services">
 
+<h2>Services We Provide</h2>
 
+<div class="services">
+
+<div class="service-box">
+<h3>Program Selection</h3>
+<p>Guidance on choosing the right program and school at SJTU.</p>
+</div>
+
+<div class="service-box">
+<h3>Scholarship Guidance</h3>
+<p>Information about CSC, Shanghai Government, and SJTU scholarships.</p>
+</div>
+
+<div class="service-box">
+<h3>Application Support</h3>
+<p>Help preparing documents and submitting the university application.</p>
+</div>
+
+<div class="service-box">
+<h3>Visa & Arrival Advice</h3>
+<p>Support for visa preparation, accommodation, and arriving in Shanghai.</p>
+</div>
+
+<div class="service-box">
+<h3>Student Life Guidance</h3>
+<p>Information about campus life, cost of living, and student communities.</p>
+</div>
+
+<div class="service-box">
+<h3>Direct Ambassador Support</h3>
+<p>Contact real SJTU students for honest advice and faster responses.</p>
+</div>
+
+</div>
+
+</section>
+  
+<section id="journey">
+
+<h2>Student Application Journey</h2>
+
+<div class="steps">
+
+<div class="step">
+<h3>1</h3>
+<p>Contact Ambassador</p>
+</div>
+
+<div class="step">
+<h3>2</h3>
+<p>Select Program</p>
+</div>
+
+<div class="step">
+<h3>3</h3>
+<p>Apply for Scholarship</p>
+</div>
+
+<div class="step">
+<h3>4</h3>
+<p>Submit SJTU Application</p>
+</div>
+
+<div class="step">
+<h3>5</h3>
+<p>Receive Admission</p>
+</div>
+
+<div class="step">
+<h3>6</h3>
+<p>Prepare Visa & Travel</p>
+</div>
+
+<div class="step">
+<h3>7</h3>
+<p>Arrive in Shanghai</p>
+</div>
+
+</div>
+
+</section>
 <section id="apply">
 
 <h2>Student Inquiry / Application Form</h2>
@@ -496,7 +687,35 @@ height="900">
 
 </section>
 
+<section id="faq">
 
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+
+<div class="faq-item">
+<h3>Do I need Chinese language to study at SJTU?</h3>
+<p>Many master's and PhD programs are offered in English. Chinese language is not always required.</p>
+</div>
+
+<div class="faq-item">
+<h3>What scholarships are available?</h3>
+<p>The most common scholarships are CSC, SJTU Scholarship, and Shanghai Government Scholarship.</p>
+</div>
+
+<div class="faq-item">
+<h3>When does the application open?</h3>
+<p>Applications usually open between December and March depending on the program.</p>
+</div>
+
+<div class="faq-item">
+<h3>Can I apply without IELTS?</h3>
+<p>Some programs may accept alternative proof of English proficiency.</p>
+</div>
+
+</div>
+
+</section>
 
 <footer>
 
