@@ -191,7 +191,13 @@ from{opacity:0;}
 to{opacity:1;}
 }
 
-
+#vision{
+background:#fafafa;
+border-left:6px solid #a50000;
+padding:40px;
+margin-top:40px;
+}
+  
 /* QR POPUP */
 
 .popup{
@@ -304,14 +310,39 @@ text-align:center;
 padding:25px;
 font-size:14px;
 }
+/* STATISTICS SECTION */
 
+.stats{
+background:#a50000;
+color:white;
+text-align:center;
+padding:60px 20px;
+}
+
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:30px;
+max-width:1000px;
+margin:auto;
+}
+
+.stat-box{
+font-size:22px;
+}
+
+.stat-number{
+font-size:40px;
+font-weight:bold;
+margin-bottom:10px;
+}
 </style>
 </head>
 
 <body>
 
 <header>
-
+<div id="google_translate_element" style="position:absolute;top:10px;right:20px;"></div>
 <img src="images/logo1.png" alt="SJTU Logo">
 
 <h1>Study at Shanghai Jiao Tong University</h1>
@@ -377,7 +408,35 @@ International students from over <b>150 countries</b> study at SJTU every year.
 
 </section>
 
+<section class="stats">
 
+<h2>Shanghai Jiao Tong University in Numbers</h2>
+
+<div class="stats-grid">
+
+<div class="stat-box">
+<div class="stat-number" data-target="46000">0</div>
+Students
+</div>
+
+<div class="stat-box">
+<div class="stat-number" data-target="150">0</div>
+Countries Represented
+</div>
+
+<div class="stat-box">
+<div class="stat-number" data-target="77">0</div>
+Undergraduate Programs
+</div>
+
+<div class="stat-box">
+<div class="stat-number" data-target="300">0</div>
+Research Institutes
+</div>
+
+</div>
+
+</section>
 
 <section id="schools">
 
@@ -706,7 +765,9 @@ Ask questions about programs, scholarships, application procedures, and student 
 
 <h2>Student Inquiry / Application Form</h2>
 
-<p>Fill out the form below if you want guidance about studying at SJTU.</p>
+<p>
+International students interested in studying at Shanghai Jiao Tong University may submit the form below to receive guidance from the SJTU International Student Ambassador Team.
+</p>
 
 <iframe 
 src="https://docs.google.com/forms/d/e/1FAIpQLSeT7TeYJL7qDDvrXvUflRDpkRfVfnzUmb3U1oVBtjocqdHqtg/viewform?embedded=true"
@@ -811,8 +872,45 @@ document.getElementById("wechatQR").style.display="none";
 }
 
 </script>
-  
 
+<script>
+
+const counters=document.querySelectorAll('.stat-number');
+
+counters.forEach(counter=>{
+counter.innerText='0';
+
+const updateCounter=()=>{
+const target=+counter.getAttribute('data-target');
+const c=+counter.innerText;
+
+const increment=target/200;
+
+if(c<target){
+counter.innerText=Math.ceil(c+increment);
+setTimeout(updateCounter,10);
+}
+else{
+counter.innerText=target;
+}
+};
+
+updateCounter();
+});
+
+</script>  
+<script>
+
+function googleTranslateElementInit() {
+new google.translate.TranslateElement(
+{pageLanguage: 'en'},
+'google_translate_element'
+);
+}
+
+</script>
+
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
 </html>
