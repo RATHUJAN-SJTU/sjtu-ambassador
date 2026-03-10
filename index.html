@@ -85,7 +85,7 @@ box-shadow:0 5px 15px rgba(0,0,0,0.3);
 .slides{
 display:flex;
 width:600%;
-animation: slide 24s infinite;
+animation: slide 36s infinite;
 }
 
 .slides img{
@@ -93,27 +93,32 @@ width:100%;
 height:450px;
 object-fit:cover;
 }
+  
+.slider:hover .slides{
+animation-play-state: paused;
+}
 
 @keyframes slide{
 
 0%{transform:translateX(0);}
-15%{transform:translateX(0);}
+12%{transform:translateX(0);}
 
-20%{transform:translateX(-100%);}
-35%{transform:translateX(-100%);}
+16%{transform:translateX(-100%);}
+28%{transform:translateX(-100%);}
 
-40%{transform:translateX(-200%);}
-55%{transform:translateX(-200%);}
+32%{transform:translateX(-200%);}
+44%{transform:translateX(-200%);}
 
+48%{transform:translateX(-300%);}
 60%{transform:translateX(-300%);}
-75%{transform:translateX(-300%);}
 
-80%{transform:translateX(-400%);}
-90%{transform:translateX(-400%);}
+64%{transform:translateX(-400%);}
+76%{transform:translateX(-400%);}
 
-95%{transform:translateX(-500%);}
-100%{transform:translateX(-500%);}
+80%{transform:translateX(-500%);}
+92%{transform:translateX(-500%);}
 
+100%{transform:translateX(0);}
 }
 /* Scholarship list */
 
@@ -352,6 +357,42 @@ font-size:40px;
 font-weight:bold;
 margin-bottom:10px;
 }
+.floating-contact{
+position:fixed;
+right:20px;
+bottom:30px;
+display:flex;
+flex-direction:column;
+gap:10px;
+z-index:1000;
+}
+
+.floating-contact button{
+background:#25D366;
+color:white;
+border:none;
+padding:12px 18px;
+border-radius:30px;
+font-size:14px;
+cursor:pointer;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+
+.floating-contact button:nth-child(2){
+background:#09B83E;
+}
+
+.fade-in{
+opacity:0;
+transform:translateY(40px);
+transition:all 1s ease;
+}
+
+.fade-in.visible{
+opacity:1;
+transform:translateY(0);
+}
+  
 </style>
 </head>
 
@@ -569,20 +610,29 @@ Many international students receive full or partial scholarships covering tuitio
 Explore the beautiful campus, modern facilities, and vibrant international student life.
 </p>
 
+<div class="slider">
 <div class="slides">
 
-<img src="images/campus1.jpg" alt="SJTU Campus">
-<img src="images/campus2.png" alt="SJTU Library">
-<img src="images/campus3.png" alt="SJTU Students">
-<img src="images/campus4.jpg" alt="SJTU Building">
-<img src="images/campus5.jpg" alt="SJTU Campus Life">
-<img src="images/campus6.jpg" alt="SJTU Students Activity">
+<img src="images/campus1.jpg">
+<img src="images/campus2.png">
+<img src="images/campus3.png">
+<img src="images/campus4.jpg">
+<img src="images/campus5.jpg">
+<img src="images/campus6.jpg">
 
 </div>
-
+</div>
 </section>
 
+<section id="global">
 
+<h2>Our Global Student Community</h2>
+
+<p>Students from over 150 countries study at Shanghai Jiao Tong University.</p>
+
+<img src="images/world-map.png" style="width:100%;max-width:900px;display:block;margin:auto;">
+
+</section>
 <section id="team">
 
 <h2>International Student Ambassador Team</h2>
@@ -597,7 +647,7 @@ We are international students currently studying at Shanghai Jiao Tong Universit
 <img src="images/ambassador1.jpg">
 <h3>E.W.M Salika Boyagoda</h3>
 <p>PhD student - Media and Communications</p>
-<p>Lecturer at Eastern University SriLanka
+<p>Lecturer at Eastern University SriLanka</p>
 <p>Helping international students apply for CSC and SJTU scholarships.</p>
 </div>
 
@@ -923,6 +973,31 @@ layout: google.translate.TranslateElement.InlineLayout.SIMPLE
 </script>
 
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <div class="floating-contact">
+
+<button onclick="openWhatsApp()">WhatsApp</button>
+
+<button onclick="openWeChat()">WeChat</button>
+
+</div>
+
+  <script>
+
+const observer = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("visible");
+}
+});
+});
+
+document.querySelectorAll("section").forEach(sec=>{
+sec.classList.add("fade-in");
+observer.observe(sec);
+});
+
+</script>
 </body>
 
 </html>
